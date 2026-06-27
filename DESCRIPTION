@@ -1,13 +1,28 @@
 Package: timeloops
-Title: What the Package Does (One Line, Title Case)
+Title: Self-Reporting Loops with Progress, Timing and Parallelism
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Authors@R:
+    person("Giovanni", "Tinervia", , "giovannitinervia9@gmail.com", role = c("aut", "cre"))
+Description: Loops for 'for', 'while', and 'repeat' that report their own
+    progress while they run, printing the iteration count, elapsed time, and an
+    estimated time to completion (for 'for' loops). Run sequentially they are
+    drop-in replacements that leave loop behaviour unchanged, including 'next'
+    and 'break' statements. The 'for' loop can also be run in parallel across
+    several cores, on all platforms and without manual cluster setup, showing a
+    live progress bar whose appearance can be customised through the 'progressr'
+    package.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 URL: https://github.com/giovannitinervia9/timeloops
 BugReports: https://github.com/giovannitinervia9/timeloops/issues
+Imports:
+    future,
+    future.apply,
+    progressr,
+    stats
+Suggests:
+    covr,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
